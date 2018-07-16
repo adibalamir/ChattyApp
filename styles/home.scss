@@ -43,6 +43,10 @@ body {
   padding: 5px;
 }
 
+.notification-content em {
+  padding: 20px
+}
+
 .message.system {
   font-style: italic;
   padding: 5px 20px;
@@ -87,3 +91,8 @@ body {
   text-decoration: none;
 }
 
+.navbar-connectedUsers {
+  position: relative;
+  left: 70%;
+  top: 10px;
+}
