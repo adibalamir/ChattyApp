@@ -4,7 +4,7 @@ Chatty App
 Chatty App is a simple aaplication that uses websockets to send messages between connected users.
 
 # Final Product
-!["Screenshot of the main products"]()
+!["Screenshot of the main products"](https://github.com/adibalamir/ChattyApp/blob/master/docs/main.PNG?raw=true)
 
 ### Usage
 
