@@ -36,3 +36,6 @@ in browser, open http://localhost:3000
 * webpack-dev-server
 * react
 * react-dom
+* uuid
+* express
+* ws
