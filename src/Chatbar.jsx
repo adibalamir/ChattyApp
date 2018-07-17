@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 
 class Chatbar extends Component {
   render(){
-    const handleKeyPressM = (e) => {
+    const handleKeyPressMessage = (e) => {
       if (e.key === 'Enter') {
         const messageInput = e.target
         const message = this.props.createMessage(messageInput.value)
         messageInput.value = "";
       }
     }
-    const handleKeyPressU = (e) => {
+    const handleKeyPressUsername = (e) => {
       if (e.key === 'Enter') {
         const messageInput = e.target
         const message = this.props.createNotification(messageInput.value)
@@ -18,8 +18,8 @@ class Chatbar extends Component {
     }
     return(
     <footer className="chatbar">
-      <input className="chatbar-username" onKeyPress={handleKeyPressU} defaultValue={this.props.currentUser.username} placeholder="Your Name (Optional)" />
-      <input className="chatbar-message" onKeyPress={handleKeyPressM} placeholder="Type a message and hit ENTER" />
+      <input className="chatbar-username" onKeyPress={handleKeyPressUsername} defaultValue={this.props.currentUser.username} placeholder="Your Name (Optional)" />
+      <input className="chatbar-message" onKeyPress={handleKeyPressMessage} placeholder="Type a message and hit ENTER" />
     </footer>
     )
   }

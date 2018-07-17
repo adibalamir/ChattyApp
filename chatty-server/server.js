@@ -21,11 +21,7 @@ wss.broadcast = function broadcast(data, ws) {
     }
   });
 };
-
-// Set up a callback that will run when a client connects to the server
-// When a client connects they are assigned a socket, represented by
-// the ws parameter in the callback.
-
+//future feature
 function getRandomColor() {
   let letters = '0123456789ABCDEF';
   let color = '#';
@@ -34,7 +30,7 @@ function getRandomColor() {
   }
   return color;
 }
-
+//sends a message to update the number of users
 function clientConnected(client) {
   let onlineUsers = wss.clients.size;
   let connectionMessage = {
@@ -46,7 +42,7 @@ function clientConnected(client) {
     wss.broadcast(JSON.stringify(connectionMessage))
   }
 }
-
+//removes number of users when a client disconnects
 function clientDisconnected() {
   let onlineUsers = wss.clients.size;
   let connectionMessage = {
@@ -65,7 +61,6 @@ wss.on('connection', (ws) => {
     wss.broadcast(data, ws);
   });
 
-  // Set up a callback for when a client closes the socket. This usually means they closed their browser.
   ws.on('close', () => {
     clientDisconnected()
     console.log('Client disconnected')
