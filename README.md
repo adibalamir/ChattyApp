@@ -23,11 +23,16 @@ in browser, open http://localhost:3000
 
 ### Dependencies
 
+* babel-core
+* babel-loader
+* babel-preset-es2015
+* babel-preset-react
+* css-loader
+* node-sass
+* sass-loader
+* sockjs-client
+* style-loader
+* webpack
+* webpack-dev-server
 * react
 * react-dom
-* webpack
-* [babel-loader](https://github.com/babel/babel-loader)
-* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-* uuid
-* express
-* node-sass
